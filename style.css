@@ -1,0 +1,99 @@
+@import url("https://fonts.googleapis.com/css2?family=Vidaloka&display=swap");
+
+* {
+ padding: 0;
+ margin: 0;
+ box-sizing: border-box;
+ font-family: "Vidaloka", serif;
+}
+
+body {
+ background-color: bisque;
+ filter: sepia(0.5);
+}
+
+section {
+ display: grid;
+ grid-template: repeat(3, 28%) / 400px repeat(4, 220px);
+ grid-template-areas:
+  "item1 item2 item3 item3 item6"
+  "item1 item4 item5 item7 item7"
+  "item1 item8 item8 item8 item8";
+ justify-content: center;
+ align-content: center;
+ height: 100vh;
+ gap: 1.3rem;
+}
+
+h1 {
+ font-size: 3rem;
+ margin: 1rem 0 1.7rem;
+}
+
+p {
+ line-height: 1.8;
+ margin-bottom: 1.4rem;
+ text-align: right;
+}
+
+section div {
+ overflow: hidden;
+ border-radius: 8px;
+ border-bottom-left-radius: 16px;
+}
+
+.item-1 {
+ grid-area: item1;
+ border: 1px black dashed;
+ border-style: dotted;
+ padding: 1.5rem 2rem;
+}
+.item-1 div {
+ width: 250px;
+ height: 250px;
+ margin: 55px auto;
+}
+
+.item-1 div img {
+ border-radius: 50%;
+ border: 12px solid black;
+ transform: rotate(95deg);
+ cursor: crosshair;
+}
+
+.item-2 {
+ grid-area: item2;
+ display: grid;
+ place-items: center;
+}
+
+.item-3 {
+ grid-area: item3;
+}
+
+.item-4 {
+ grid-area: item4;
+}
+
+.item-5 {
+ grid-area: item5;
+}
+
+.item-6 {
+ grid-area: item6;
+}
+
+.item-7 {
+ grid-area: item7;
+}
+
+.item-8 {
+ grid-area: item8;
+}
+
+section div img {
+ width: 100%;
+ height: 100%;
+ object-fit: cover;
+ cursor: zoom-in;
+}
